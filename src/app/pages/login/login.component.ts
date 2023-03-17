@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Router } from '@angular/router';
-import { MatDialog } from '@angular/material/dialog';
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-login',
@@ -10,7 +9,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private dialog: MatDialog) { }
 
   username: string | undefined;
   password: string | undefined;
@@ -19,6 +18,10 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    
+
+  }
+
+  signIn(): void {
+    this.router.navigate(['/signup']);
   }
 }
