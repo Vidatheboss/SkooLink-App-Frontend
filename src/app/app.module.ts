@@ -25,6 +25,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProfileComponent } from './pages/profile/profile.component';
 import {MatSelectModule} from '@angular/material/select';
+import { InboxComponent } from './pages/inbox/inbox.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import {MatSelectModule} from '@angular/material/select';
     LoginComponent,
     ProfilesComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    InboxComponent
   ],
   imports: [
     BrowserModule,
