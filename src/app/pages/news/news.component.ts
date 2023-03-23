@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class NewsComponent {
 
+    course: string = '';
+    grade: string = '';
+
+    public grades: any;
+
+    displayedColumns: string[] = ['grade'];
+
 }
