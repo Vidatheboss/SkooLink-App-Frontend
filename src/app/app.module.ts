@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,7 +10,7 @@ import { FooterComponent } from './partials/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfilesComponent } from './pages/profiles/profiles.component';
-import { HttpClientModule } from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { SignupComponent } from './pages/signup/signup.component';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -25,6 +25,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProfileComponent } from './pages/profile/profile.component';
 import {MatSelectModule} from '@angular/material/select';
+import { InboxComponent } from './pages/inbox/inbox.component';
+import { NewsComponent } from './pages/news/news.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import {TokenInterceptorInterceptor} from "./services/token-interceptor.interceptor";
 
 @NgModule({
   declarations: [
@@ -35,28 +39,31 @@ import {MatSelectModule} from '@angular/material/select';
     LoginComponent,
     ProfilesComponent,
     SignupComponent,
-    ProfileComponent
+    ProfileComponent,
+    NewsComponent,
+    InboxComponent
   ],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    FormsModule,
-    AppRoutingModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    MatSlideToggleModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCardModule,
-    MatDialogModule,
-    MatTableModule,
-    MatProgressSpinnerModule,
-    MatSelectModule
-  ],
-  providers: [],
+    imports: [
+        BrowserModule,
+        CommonModule,
+        FormsModule,
+        AppRoutingModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        MatSlideToggleModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCardModule,
+        MatDialogModule,
+        MatTableModule,
+        MatProgressSpinnerModule,
+        MatSelectModule,
+        ReactiveFormsModule
+    ],
+  providers: [HttpClientModule,{provide:HTTP_INTERCEPTORS, useClass:TokenInterceptorInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

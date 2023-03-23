@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit{
   displayedColumns: string[] = ['course', 'grade', 'actions'];
 
   ngOnInit(): void {
-    if(this.permission == 1) this.displayedColumns.splice(2, 1);
+    // if(this.permission == 1) this.displayedColumns.splice(2, 1);
   }
 
   constructor(private route: ActivatedRoute, private studentService: StudentService, private courseService: CourseService, private router: Router){
