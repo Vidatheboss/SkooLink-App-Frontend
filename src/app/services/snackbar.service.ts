@@ -15,7 +15,14 @@ export class SnackbarService {
         verticalPosition: 'top',
         duration: 2000,
         panelClass: ['black-snackbar']
-      })
+      });
+    } else {
+      this.snackbar.open(message, '', {
+        horizontalPosition: 'center',
+        verticalPosition: 'top',
+        duration: 2000,
+        panelClass: ['black-snackbar']
+      });
     }
   }
 }

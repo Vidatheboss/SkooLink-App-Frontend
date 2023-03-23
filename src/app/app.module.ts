@@ -10,7 +10,7 @@ import { FooterComponent } from './partials/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfilesComponent } from './pages/profiles/profiles.component';
-import { HttpClientModule } from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { SignupComponent } from './pages/signup/signup.component';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -26,6 +26,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProfileComponent } from './pages/profile/profile.component';
 import {MatSelectModule} from '@angular/material/select';
 import { InboxComponent } from './pages/inbox/inbox.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import {TokenInterceptorInterceptor} from "./services/token-interceptor.interceptor";
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { InboxComponent } from './pages/inbox/inbox.component';
     ProfilesComponent,
     SignupComponent,
     ProfileComponent,
-    InboxComponent
+    InboxComponent,
+    DashboardComponent
   ],
     imports: [
         BrowserModule,
@@ -59,7 +62,7 @@ import { InboxComponent } from './pages/inbox/inbox.component';
         MatSelectModule,
         ReactiveFormsModule
     ],
-  providers: [],
+  providers: [HttpClientModule,{provide:HTTP_INTERCEPTORS, useClass:TokenInterceptorInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
