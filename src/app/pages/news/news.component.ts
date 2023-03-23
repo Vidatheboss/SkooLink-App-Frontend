@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NewsService} from '../../services/news.service';
 
@@ -7,25 +7,27 @@ import { NewsService} from '../../services/news.service';
   templateUrl: './news.component.html',
   styleUrls: ['./news.component.css']
 })
-export class NewsComponent {
+export class NewsComponent implements OnInit{
+  new: string = '';
 
-    public news: any;
-    public category: any;
-    
+  public news: any;
+  
 
-    displayedColumns: string[] = ['grade'];
+  displayedColumns: string[] = ['category','description'];
 
-    constructor(private route: ActivatedRoute, private newsService: NewsService, private router: Router){
-            
-        this.newsService.getNews().subscribe((response)=>{
-               this.news = response;
-               console.log(this.news);
-    
+  ngOnInit(): void {
+    // if(this.permission == 1) this.displayedColumns.splice(2, 1);
+  }
 
-        },(error=>{
-    
-        }));
-    
-    }
+  constructor(private route: ActivatedRoute, private newsService: NewsService, private router: Router){
+          
+      this.newsService.getNews().subscribe((response)=>{
+              this.news = response;
+              console.log(this.news);
+      },(error=>{
+  
+      }));
+  
+  }
 
 }
