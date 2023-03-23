@@ -26,6 +26,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProfileComponent } from './pages/profile/profile.component';
 import {MatSelectModule} from '@angular/material/select';
 import { InboxComponent } from './pages/inbox/inbox.component';
+import { NewsComponent } from './pages/news/news.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import {TokenInterceptorInterceptor} from "./services/token-interceptor.interceptor";
 
@@ -39,8 +40,8 @@ import {TokenInterceptorInterceptor} from "./services/token-interceptor.intercep
     ProfilesComponent,
     SignupComponent,
     ProfileComponent,
-    InboxComponent,
-    DashboardComponent
+    NewsComponent,
+    InboxComponent
   ],
     imports: [
         BrowserModule,
