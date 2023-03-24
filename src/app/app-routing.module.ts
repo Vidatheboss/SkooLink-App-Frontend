@@ -7,16 +7,23 @@ import { ProfilesComponent } from './pages/profiles/profiles.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { NewsComponent } from './pages/news/news.component';
+import { RouteGuardService } from "./services/route-guard.service";
 
 const routes: Routes = [
   { path:'home', component: HomeComponent },
   { path:'login', component: LoginComponent },
-  { path:'profiles', component: ProfilesComponent },
+  { path:'profiles', component: ProfilesComponent,
+    canActivate: [RouteGuardService],
+    data: { expectedRole: ['1', '2', '3', '4', '5'] }
+  },
   { path:'signup', component: SignupComponent },
   { path:'profile/:id/grades', component: ProfileComponent },
   { path:'profile/:id', component: ProfileComponent },
   { path:'', redirectTo: 'login', pathMatch: 'full' },
-  { path:'news', component: NewsComponent }
+  { path:'news', component: NewsComponent,
+    canActivate: [RouteGuardService],
+    data: { expectedRole: ['1', '2', '3', '4', '5'] }
+  }
 ];
 
 @NgModule({
