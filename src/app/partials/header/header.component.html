@@ -6,26 +6,29 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto ml-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="login"><mat-icon>check</mat-icon>Login</a>
+        <li class="nav-item" *ngIf="!isLoggedIn()">
+          <a class="nav-link active" aria-current="page" href="/login"><mat-icon>check</mat-icon> Login</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="home"><mat-icon>home</mat-icon>Home</a>
+        <li class="nav-item" *ngIf="!isLoggedIn()">
+          <a class="nav-link active" aria-current="page" href="/home"><mat-icon>home</mat-icon> Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="profiles"><mat-icon>supervised_user_circle</mat-icon>Profiles</a>
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link active" aria-current="page" href="/dashboard"><mat-icon>dashboard</mat-icon> Dashboard</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="news"><mat-icon>speaker_notes</mat-icon>News</a>
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link active" aria-current="page" href="/profiles"><mat-icon>supervised_user_circle</mat-icon> Profiles</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="support"><mat-icon>contact_support</mat-icon>Support</a>
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link active" aria-current="page" href="/news"><mat-icon>speaker_notes</mat-icon> News</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link active" aria-current="page" href="/support"><mat-icon>contact_support</mat-icon> Support</a>
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn()">
           <a class="nav-link active" aria-current="page" href="inbox/2"><mat-icon>mail</mat-icon>Inbox</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="logout"><mat-icon>close</mat-icon>Logout</a>
+        <li class="nav-item" *ngIf="isLoggedIn()">
+          <a class="nav-link active" aria-current="page" (click)="logout()" href=""><mat-icon>close</mat-icon> Logout</a>
         </li>
       </ul>
     </div>
