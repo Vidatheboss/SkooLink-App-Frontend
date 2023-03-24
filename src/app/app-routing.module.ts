@@ -7,6 +7,7 @@ import { ProfilesComponent } from './pages/profiles/profiles.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { NewsComponent } from './pages/news/news.component';
+import { InboxComponent } from './pages/inbox/inbox.component';
 
 const routes: Routes = [
   { path:'home', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path:'profile/:id/grades', component: ProfileComponent },
   { path:'profile/:id', component: ProfileComponent },
   { path:'', redirectTo: 'login', pathMatch: 'full' },
+  { path:'inbox/:id', component: InboxComponent },
   { path:'news', component: NewsComponent }
 ];
 
