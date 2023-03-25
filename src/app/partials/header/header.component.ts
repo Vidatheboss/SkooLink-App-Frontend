@@ -8,6 +8,8 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent {
 
+  id = localStorage.getItem('id')
+
   constructor(private router: Router) {
   }
   logout(){
