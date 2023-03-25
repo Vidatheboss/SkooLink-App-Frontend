@@ -7,6 +7,7 @@ import { ProfilesComponent } from './pages/profiles/profiles.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { NewsComponent } from './pages/news/news.component';
+import { InboxComponent } from './pages/inbox/inbox.component';
 import { RouteGuardService } from "./services/route-guard.service";
 
 const routes: Routes = [
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path:'profile/:id/grades', component: ProfileComponent },
   { path:'profile/:id', component: ProfileComponent },
   { path:'', redirectTo: 'login', pathMatch: 'full' },
+  { path:'inbox/:id', component: InboxComponent },
   { path:'news', component: NewsComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }

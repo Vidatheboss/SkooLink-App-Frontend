@@ -44,5 +44,17 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.9.4"
-  }
+  },
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vidatheboss/SkooLink-App-Frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vidatheboss/SkooLink-App-Frontend/issues"
+  },
+  "homepage": "https://github.com/Vidatheboss/SkooLink-App-Frontend#readme"
 }
