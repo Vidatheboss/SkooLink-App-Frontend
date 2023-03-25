@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(data).subscribe((response: any) =>{
       localStorage.setItem('token', response.token);
 
-      this.router.navigate(['/home'])
+      this.router.navigate(['/dashboard'])
     },(error) => {
       if (error.error?.message) {
         this.respondMessage = error.error?.message;
