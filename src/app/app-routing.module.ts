@@ -7,11 +7,8 @@ import { ProfilesComponent } from './pages/profiles/profiles.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { NewsComponent } from './pages/news/news.component';
-<<<<<<< HEAD
 import { InboxComponent } from './pages/inbox/inbox.component';
-=======
 import { RouteGuardService } from "./services/route-guard.service";
->>>>>>> 27de6452c9c01b18fe82327094c8b625885faf86
 
 const routes: Routes = [
   { path:'home', component: HomeComponent },
@@ -24,15 +21,11 @@ const routes: Routes = [
   { path:'profile/:id/grades', component: ProfileComponent },
   { path:'profile/:id', component: ProfileComponent },
   { path:'', redirectTo: 'login', pathMatch: 'full' },
-<<<<<<< HEAD
   { path:'inbox/:id', component: InboxComponent },
-  { path:'news', component: NewsComponent }
-=======
   { path:'news', component: NewsComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
   }
->>>>>>> 27de6452c9c01b18fe82327094c8b625885faf86
 ];
 
 @NgModule({
