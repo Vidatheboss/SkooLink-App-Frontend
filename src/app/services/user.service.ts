@@ -12,7 +12,7 @@ export class UserService {
 
   signup(data:any){
     return this.httpClient.post(this.url +
-    "/user/signup", data, {
+    "/users/signup", data, {
       headers: new HttpHeaders().set('Content-Type', "application/json")
     })
   }

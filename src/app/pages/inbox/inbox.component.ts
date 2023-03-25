@@ -21,9 +21,9 @@ export class InboxComponent {
 
   constructor(private route: ActivatedRoute, private inboxService: InboxService, private router: Router){
     this.id = route.snapshot.paramMap.get('id');
-    
+
     this.inboxService.getMessage(this.id).subscribe((response)=>{
-      
+
       this.messages  = response;
        console.log(this.messages);
       //this.message = result[0].message;
@@ -31,7 +31,7 @@ export class InboxComponent {
 
     }));
 
-    
+
   }
 }
 
