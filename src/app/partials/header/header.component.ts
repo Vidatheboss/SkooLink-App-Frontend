@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
 })
 export class HeaderComponent {
 
-  constructor(private  router: Router) {
+  constructor(private router: Router) {
   }
   logout(){
     localStorage.clear();
@@ -17,11 +17,15 @@ export class HeaderComponent {
 
   isLoggedIn(): boolean{
     const token = localStorage.getItem('token');
-    console.log(token)
+
     if (token != null){
       return true;
     } else {
       return false;
     }
+  }
+
+  getUserId(){
+
   }
 }

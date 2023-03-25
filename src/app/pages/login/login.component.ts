@@ -38,6 +38,7 @@ export class LoginComponent implements OnInit {
     }
     this.userService.login(data).subscribe((response: any) =>{
       localStorage.setItem('token', response.token);
+
       this.router.navigate(['/home'])
     },(error) => {
       if (error.error?.message) {
