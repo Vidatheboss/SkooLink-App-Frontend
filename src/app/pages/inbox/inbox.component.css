@@ -1,0 +1,36 @@
+.main-div {
+    height: 100vh;
+    background-color: rgb(190, 190, 238);
+    position:relative; 
+    display:block;
+}
+.content{
+    position:absolute;
+    width: 100%;
+    top: 10%;
+}
+mat-card{
+    width: 60%;
+    margin-bottom: 20px;
+}
+.mat-column-course{
+    width: 40%;
+}
+.mat-column-grade{
+    width: 30%;
+}.mat-column-actions{
+    width: 30%;
+}
+table{
+    margin-bottom: 20px;
+}
+.grades-table{
+    width: 60%;
+}
+button{
+    margin-right: 10px;
+}
+.grades-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+}
+
