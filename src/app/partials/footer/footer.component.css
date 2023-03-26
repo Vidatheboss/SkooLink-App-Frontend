@@ -1,3 +1,7 @@
 .fixed-bottom{
     border-top: 3px solid;
 }
+
+p {
+  margin-top: 10px;
+}

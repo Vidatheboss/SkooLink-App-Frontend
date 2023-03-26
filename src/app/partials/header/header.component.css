@@ -1,9 +1,10 @@
-a{
-    color: rgb(93, 93, 241);
+a {
+  color: rgb(93, 93, 241);
 }
-nav{
-    border-bottom: 3px solid;
+nav {
+  border-bottom: 3px solid;
+  background-color: white;
 }
-.mat-icon{
-    color: rgb(93, 93, 241);
+.mat-icon {
+  color: rgb(93, 93, 241);
 }

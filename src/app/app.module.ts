@@ -10,7 +10,7 @@ import { FooterComponent } from './partials/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProfilesComponent } from './pages/profiles/profiles.component';
-import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { SignupComponent } from './pages/signup/signup.component';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -24,12 +24,16 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ProfileComponent } from './pages/profile/profile.component';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { InboxComponent } from './pages/inbox/inbox.component';
 import { NewsComponent } from './pages/news/news.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+<<<<<<< HEAD
 import {TokenInterceptorInterceptor} from "./services/token-interceptor.interceptor";
 import { ComposeComponent } from './pages/compose/compose.component';
+=======
+import { TokenInterceptorInterceptor } from "./services/token-interceptor.interceptor";
+>>>>>>> 0e71900602b1b8c8338f53f67be173ece8304b0a
 
 @NgModule({
   declarations: [
@@ -45,6 +49,7 @@ import { ComposeComponent } from './pages/compose/compose.component';
     InboxComponent,
     ComposeComponent,
 
+    DashboardComponent
   ],
     imports: [
         BrowserModule,
