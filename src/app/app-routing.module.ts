@@ -23,6 +23,7 @@ const routes: Routes = [
   { path:'profile/:id/grades', component: ProfileComponent },
   { path:'profile/:id', component: ProfileComponent },
   { path:'inbox/:id', component: InboxComponent },
+  { path:'profile/:id', component: ProfileComponent },
   { path:'news', component: NewsComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
