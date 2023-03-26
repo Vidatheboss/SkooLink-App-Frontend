@@ -33,5 +33,8 @@ export class InboxComponent {
 
 
   }
+    goToNewPage() {
+    this.router.navigate(['/compose']);
+    }
 }
 

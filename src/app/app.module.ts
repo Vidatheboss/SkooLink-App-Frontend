@@ -28,7 +28,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { InboxComponent } from './pages/inbox/inbox.component';
 import { NewsComponent } from './pages/news/news.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+<<<<<<< HEAD
+import {TokenInterceptorInterceptor} from "./services/token-interceptor.interceptor";
+import { ComposeComponent } from './pages/compose/compose.component';
+=======
 import { TokenInterceptorInterceptor } from "./services/token-interceptor.interceptor";
+>>>>>>> 0e71900602b1b8c8338f53f67be173ece8304b0a
 
 @NgModule({
   declarations: [
@@ -42,6 +47,8 @@ import { TokenInterceptorInterceptor } from "./services/token-interceptor.interc
     ProfileComponent,
     NewsComponent,
     InboxComponent,
+    ComposeComponent,
+
     DashboardComponent
   ],
     imports: [
