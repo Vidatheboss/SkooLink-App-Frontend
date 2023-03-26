@@ -9,6 +9,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { NewsComponent } from './pages/news/news.component';
 import { InboxComponent } from './pages/inbox/inbox.component';
 import { RouteGuardService } from "./services/route-guard.service";
+import { ComposeComponent } from './pages/compose/compose.component';
+
 
 const routes: Routes = [
   { path:'home', component: HomeComponent },
@@ -25,7 +27,8 @@ const routes: Routes = [
   { path:'news', component: NewsComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
-  }
+  },
+  { path:'compose', component: ComposeComponent }
 ];
 
 @NgModule({

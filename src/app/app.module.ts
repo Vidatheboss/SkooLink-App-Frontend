@@ -29,6 +29,7 @@ import { InboxComponent } from './pages/inbox/inbox.component';
 import { NewsComponent } from './pages/news/news.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import {TokenInterceptorInterceptor} from "./services/token-interceptor.interceptor";
+import { ComposeComponent } from './pages/compose/compose.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,9 @@ import {TokenInterceptorInterceptor} from "./services/token-interceptor.intercep
     SignupComponent,
     ProfileComponent,
     NewsComponent,
-    InboxComponent
+    InboxComponent,
+    ComposeComponent,
+
   ],
     imports: [
         BrowserModule,
