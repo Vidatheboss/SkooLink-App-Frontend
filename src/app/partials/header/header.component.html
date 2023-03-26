@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto ml-auto mb-2 mb-lg-0">
         <li class="nav-item" *ngIf="!isLoggedIn()">
-          <a class="nav-link active" aria-current="page" href="/login"><mat-icon>check</mat-icon> Login</a>
+          <a class="nav-link active" aria-current="page" href="/home"><mat-icon>home</mat-icon> Home</a>
         </li>
         <li class="nav-item" *ngIf="!isLoggedIn()">
-          <a class="nav-link active" aria-current="page" href="/home"><mat-icon>home</mat-icon> Home</a>
+          <a class="nav-link active" aria-current="page" href="/login"><mat-icon>check</mat-icon> Login</a>
         </li>
         <li class="nav-item" *ngIf="isLoggedIn()">
           <a class="nav-link active" aria-current="page" href="/dashboard"><mat-icon>dashboard</mat-icon> Dashboard</a>
@@ -25,7 +25,7 @@
           <a class="nav-link active" aria-current="page" href="/support"><mat-icon>contact_support</mat-icon> Support</a>
         </li>
         <li class="nav-item" *ngIf="isLoggedIn()">
-          <a class="nav-link active" aria-current="page" href="inbox/2"><mat-icon>mail</mat-icon>Inbox</a>
+          <a class="nav-link active" aria-current="page" href="/inbox/{{ id }}"><mat-icon>mail</mat-icon> Inbox</a>
         </li>
         <li class="nav-item" *ngIf="isLoggedIn()">
           <a class="nav-link active" aria-current="page" (click)="logout()" href=""><mat-icon>close</mat-icon> Logout</a>

@@ -7,6 +7,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 })
 export class InboxService {
   apiUrlGetMessage = environment.apiUrl + '/inbox/messages'
+  apiUrlInsertMessage = environment.apiUrl + '/inbox/compose'
 
   constructor(private httpClient:HttpClient){
   }
@@ -17,7 +18,9 @@ export class InboxService {
     return this.httpClient.get<JSON>(API_URL+'/'+id) 
   }
 
-
+  insertMessage(data: any){
+    return this.httpClient.post(this.apiUrlInsertMessage, data)
+  }
 
 }
 
