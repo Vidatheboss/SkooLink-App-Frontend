@@ -9,19 +9,13 @@ import { ProfilesService } from '../../services/profiles.service';
 })
 export class ProfilesComponent{
 
-  name: string ='';
-  prescription: string = '';
-  medical_information: string = '';
-  user_id: string='';
-
   //public id: any;
   public studentstable:any;
 
-  displayedColumns: string[] = ['user_id','name','prescription','medical_information'];
+  displayedColumns: string[] = ['student_id','name','detais'];
 
 
   constructor(private route: ActivatedRoute, private profilesService: ProfilesService, private router: Router){
-   // this.id = route.snapshot.paramMap.get('id');
     
     this.profilesService.getStudents().subscribe((response)=>{
       
