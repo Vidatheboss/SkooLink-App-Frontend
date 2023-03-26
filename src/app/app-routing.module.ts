@@ -30,14 +30,11 @@ const routes: Routes = [
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
   },
-<<<<<<< HEAD
-  { path:'compose', component: ComposeComponent }
-=======
+  { path:'compose', component: ComposeComponent },
   { path: 'dashboard', component: DashboardComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
   }
->>>>>>> 0e71900602b1b8c8338f53f67be173ece8304b0a
 ];
 
 @NgModule({
