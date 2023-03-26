@@ -22,6 +22,7 @@ const routes: Routes = [
   { path:'profile/:id', component: ProfileComponent },
   { path:'', redirectTo: 'login', pathMatch: 'full' },
   { path:'inbox/:id', component: InboxComponent },
+  { path:'profile/:id', component: ProfileComponent },
   { path:'news', component: NewsComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }

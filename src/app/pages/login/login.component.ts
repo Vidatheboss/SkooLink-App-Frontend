@@ -36,6 +36,7 @@ export class LoginComponent implements OnInit {
       email: formData.email,
       password: formData.password
     }
+    
     this.userService.login(data).subscribe((response: any) =>{
       localStorage.setItem('token', response.token);
       this.router.navigate(['/home'])
