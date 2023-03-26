@@ -1,0 +1,44 @@
+<form [formGroup]="composeForm" >
+    <div class="container w-75">
+        <!-- Heading -->
+        <div class="row">
+            <h2 class="p-1">Write Your Message Here</h2>
+            <hr/>
+        </div>
+        <!-- Content -->
+        <div class="row">
+            <div class="mb-3 col-md-6">
+                <label class="form-label" for="inputIncidentID">Sender: </label>
+                <input type="text" class="form-control rounded-0" id="inputIncidentID" formControlName="senderEmail" placeholder="Your Email Address" />
+            </div>
+            <div class="mb-3 col-md-6">
+                <label class="form-label" for="inputIncidentID">Recipient: </label>
+                <input type="text" class="form-control rounded-0" id="inputIncidentID" formControlName="recipientEmail" placeholder="Recipient Email Address" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-6">
+                <label class="form-label" for="inputIncidentID">Subject: </label>
+                <input type="text" class="form-control rounded-0" id="inputIncidentID" formControlName="subjectLine" placeholder="Enter Subject Here" />
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label" for="inputDescription">Message</label>
+            <textarea type="text" class="form-control rounded-0"
+                    id="inputDescription" formControlName="description" placeholder="Enter the incident's description.."></textarea>
+        </div>
+        
+    </div>
+        <div class="row">
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col float-end">
+                <div class="mb-3">
+                    <button class="btn btn-primary" (click)="insertMessage()">Send </button>
+                </div>
+            </div>
+        </div>
+</form>

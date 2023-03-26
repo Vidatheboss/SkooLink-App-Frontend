@@ -9,6 +9,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { NewsComponent } from './pages/news/news.component';
 import { InboxComponent } from './pages/inbox/inbox.component';
 import { RouteGuardService } from "./services/route-guard.service";
+import { ComposeComponent } from './pages/compose/compose.component';
+
 import {DashboardComponent} from "./pages/dashboard/dashboard.component";
 
 const routes: Routes = [
@@ -28,10 +30,14 @@ const routes: Routes = [
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
   },
+<<<<<<< HEAD
+  { path:'compose', component: ComposeComponent }
+=======
   { path: 'dashboard', component: DashboardComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
   }
+>>>>>>> 0e71900602b1b8c8338f53f67be173ece8304b0a
 ];
 
 @NgModule({
