@@ -1,0 +1,29 @@
+.main-div {
+  height: 40vh;
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(190, 190, 238);
+}
+
+a {
+  color: rgb(190, 160, 238);
+}
+
+.dashboardCard {
+  width: 250px;
+  margin: 20px;
+}
+
+.cardImage {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cardContent {
+  margin-top: 30px;
+  text-align: center;
+}
