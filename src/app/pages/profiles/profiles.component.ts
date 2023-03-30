@@ -9,24 +9,31 @@ import { ProfilesService } from '../../services/profiles.service';
 })
 export class ProfilesComponent{
 
-  //public id: any;
   public studentstable:any;
+  public searchStudent:any;
 
-  displayedColumns: string[] = ['student_id','name','detais'];
+  displayedColumns: string[] = ['student_id','name','details'];
 
 
   constructor(private route: ActivatedRoute, private profilesService: ProfilesService, private router: Router){
-    
-    this.profilesService.getStudents().subscribe((response)=>{
-      
-      this.studentstable  = response;
-       console.log(this.studentstable);
+    this.getStudent("");
+  }
 
-    },(error=>{
-
-    }));
-
-    
+  getStudent(student: string){
+    if(student === "" || student === undefined){
+      this.profilesService.getStudents().subscribe((response)=>{
+        this.studentstable  = response;
+      },(error=>{
+  
+      }));
+    } 
+    else{
+      this.profilesService.getStudent(student).subscribe((response)=>{
+        this.studentstable  = response;
+      },(error=>{
+  
+      }));
+    }
   }
 
 }
