@@ -11,17 +11,17 @@ import { CourseService } from '../../services/course.service';
 export class ProfileComponent implements OnInit{
   course: string = '';
   grade: string = '';
+  displayedColumns: string[] = ['course', 'grade', 'actions'];
 
   public id: any;
   public student: any;
   public grades: any;
   public gradeId: any;
   public courses: any;
-  public permission: any = 2;
-  displayedColumns: string[] = ['course', 'grade', 'actions'];
+  public role: any = localStorage.getItem('role');
 
   ngOnInit(): void {
-    // if(this.permission == 1) this.displayedColumns.splice(2, 1);
+     if(this.role == "1") this.displayedColumns.splice(2, 1);
   }
 
   constructor(private route: ActivatedRoute, private studentService: StudentService, private courseService: CourseService, private router: Router){
@@ -84,11 +84,11 @@ export class ProfileComponent implements OnInit{
 
   clearFields(){
     this.course = "";
-    this.grade = ""
+    this.grade = "";
   }
 
-  ifTeacher() : boolean{
-    if(this.permission == 2) return true
+  ifStaff() : boolean{
+    if(this.role != "1") return true
     else return false
   }
 }

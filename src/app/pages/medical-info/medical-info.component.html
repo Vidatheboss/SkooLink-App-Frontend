@@ -1,0 +1,111 @@
+<div class="main-div">
+    <div class="content">
+        <mat-card>
+            <mat-card-content>{{studentName}} - Medical History</mat-card-content>
+        </mat-card>
+        <div class="medical-table">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef> Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.date | date}} </td>
+                </ng-container>
+                <ng-container matColumnDef="nurse">
+                    <th mat-header-cell *matHeaderCellDef> Nurse </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+                <ng-container matColumnDef="info">
+                    <th mat-header-cell *matHeaderCellDef> Info </th>
+                    <td mat-cell *matCellDef="let element"> 
+                        <button (click)="loadMedInfo(element.id, element.description)" mat-stroked-button data-bs-toggle="modal" data-bs-target="#seeInfo">Click to see it</button> 
+                    </td>
+                </ng-container>
+                <ng-container *ngIf="ifNurse()" matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let element">
+                        <button mat-fab color="primary" (click)="loadMedInfo(element.id, element.description)" data-bs-toggle="modal" data-bs-target="#editMedInfo">
+                            <mat-icon>edit</mat-icon>
+                        </button>
+                        <button mat-fab color="warn" (click)="deleteMedInfo(element.id)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <button *ngIf="ifNurse()" mat-raised-button color="primary" (click)="clearFields()" data-bs-toggle="modal" data-bs-target="#addMedInfo">
+                Add Medical Info
+            </button>
+
+             <div class="modal fade" id="addMedInfo" tabindex="-1" aria-labelledby="addMedInfoModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="addMedInfoModal">Add Medical Information</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="medical-container">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Medical Information</mat-label>
+                                    <textarea matInput cols="35" rows="8" [(ngModel)]="medicalInfo" required></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" (click)="insertMedInfo(medicalInfo)" data-bs-dismiss="modal">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="editMedInfo" tabindex="-1" aria-labelledby="editMedInfoModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="editMedInfoModal">Edit Grade</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="medical-container">
+                                <mat-form-field appearance="fill">
+                                    <mat-label>Medical Information</mat-label>
+                                    <textarea matInput cols="35" rows="8" [(ngModel)]="medicalInfo" required></textarea>
+                                    <input type="hidden" [(ngModel)]="medInfoId">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" (click)="editMedInfo(medInfoId, medicalInfo)"  data-bs-dismiss="modal">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="modal fade" id="seeInfo" tabindex="-1" aria-labelledby="seeInfoModal" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="seeInfoModal">Medical Information</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="medical-container">
+                                <mat-form-field appearance="fill">
+                                    <textarea matInput cols="35" rows="8" [(ngModel)]="medicalInfo" required></textarea>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>

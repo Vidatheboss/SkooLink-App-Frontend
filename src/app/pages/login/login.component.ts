@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
     this.userService.login(data).subscribe((response: any) =>{
       localStorage.setItem('token', response.token);
       localStorage.setItem('id', response.id);
-
+      localStorage.setItem('role', response.role);
       this.router.navigate(['/dashboard'])
     },(error) => {
       if (error.error?.message) {

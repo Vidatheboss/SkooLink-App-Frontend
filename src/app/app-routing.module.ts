@@ -10,6 +10,7 @@ import { NewsComponent } from './pages/news/news.component';
 import { InboxComponent } from './pages/inbox/inbox.component';
 import { RouteGuardService } from "./services/route-guard.service";
 import { ComposeComponent } from './pages/compose/compose.component';
+import { MedicalInfoComponent } from './pages/medical-info/medical-info.component';
 
 import {DashboardComponent} from "./pages/dashboard/dashboard.component";
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   },
   { path:'signup', component: SignupComponent },
   { path:'profile/:id/grades', component: ProfileComponent },
+  { path:'profile/:id/medical-info', component: MedicalInfoComponent },
   { path:'profile/:id', component: ProfileComponent },
   { path:'inbox/:id', component: InboxComponent },
   { path:'profile/:id', component: ProfileComponent },

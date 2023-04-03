@@ -9,22 +9,18 @@
     width: 100%;
     top: 10%;
 }
-mat-card{
-    width: 60%;
-    margin-bottom: 20px;
+.mat-column-name{
+    width: 50%;
 }
-.mat-column-course{
-    width: 40%;
-}
-.mat-column-grade{
-    width: 30%;
-}.mat-column-actions{
-    width: 30%;
+.mat-column-id{
+    width: 15%;
+}.mat-column-details{
+    width: 35%;
 }
 table{
     margin-bottom: 20px;
 }
-.grades-table{
+.students-table{
     width: 60%;
 }
 button{
