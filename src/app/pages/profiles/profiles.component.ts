@@ -36,4 +36,9 @@ export class ProfilesComponent{
     }
   }
 
+  ifNurse() : boolean{
+    if(localStorage.getItem('role') == "3") return true
+    else return false
+  }
+
 }

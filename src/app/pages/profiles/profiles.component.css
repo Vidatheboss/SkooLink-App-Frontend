@@ -10,12 +10,12 @@
     top: 10%;
 }
 .mat-column-name{
-    width: 40%;
+    width: 50%;
 }
 .mat-column-id{
-    width: 30%;
+    width: 15%;
 }.mat-column-details{
-    width: 30%;
+    width: 35%;
 }
 table{
     margin-bottom: 20px;
