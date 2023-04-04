@@ -1,0 +1,26 @@
+.usersTable {
+  margin-top: 20px;
+}
+
+.deleteIcon {
+  color: indianred;
+}
+
+.editIcon {
+  color: mediumpurple;
+}
+
+.addButton {
+  margin-top: 20px;
+  padding: 5px;
+  border: none;
+  width: 150px;
+  border-radius: 5px;
+  background-color: mediumpurple;
+  color: white;
+}
+
+.addButton:hover {
+  background-color: white;
+  color: mediumpurple;
+}

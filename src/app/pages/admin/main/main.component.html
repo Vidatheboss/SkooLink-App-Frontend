@@ -1,0 +1,34 @@
+<div class="main-div">
+  <div>
+    <a href="/admin/create"><button class="addButton">Add</button></a>
+  </div>
+  <div class="content usersTable">
+    <div class="grades-table">
+      <table mat-table [dataSource]="users" class="mat-elevation-z8">
+        <ng-container matColumnDef="username">
+          <th mat-header-cell *matHeaderCellDef> User Name </th>
+          <td mat-cell *matCellDef="let element"> {{ element.username }} </td>
+        </ng-container>
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> Email </th>
+          <td mat-cell *matCellDef="let element"> {{ element.email }} </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Role </th>
+          <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+        </ng-container>
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let element">
+            <a href="/admin/edit/{{ element.id }}"><i class="fa-solid fa-pen-to-square fa-xl editIcon"></i></a>
+            &nbsp;&nbsp;
+            <a href="/admin/delete/{{ element.id }}"><i class="fa-solid fa-trash fa-xl deleteIcon"></i></a>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</div>

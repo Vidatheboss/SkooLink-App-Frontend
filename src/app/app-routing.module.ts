@@ -13,6 +13,7 @@ import { ComposeComponent } from './pages/compose/compose.component';
 import { MedicalInfoComponent } from './pages/medical-info/medical-info.component';
 
 import {DashboardComponent} from "./pages/dashboard/dashboard.component";
+import {MainComponent} from "./pages/admin/main/main.component";
 
 const routes: Routes = [
   { path:'home', component: HomeComponent },
@@ -36,7 +37,11 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
-  }
+  },
+  { path:'admin/main', component: MainComponent,
+    canActivate: [RouteGuardService],
+    data: { expectedRole: ['5'] }
+  },
 ];
 
 @NgModule({
