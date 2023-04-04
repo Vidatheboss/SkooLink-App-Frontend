@@ -24,3 +24,7 @@
   background-color: white;
   color: mediumpurple;
 }
+
+i:hover {
+  cursor: pointer;
+}

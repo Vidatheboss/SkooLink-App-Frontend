@@ -30,7 +30,11 @@ export class UserService {
 
   getUsers(){
     let API_URL = `${this.url}/users/getUsers`;
-    console.log(API_URL);
     return this.httpClient.get<JSON>(API_URL);
+  }
+
+  deleteUser(id: any){
+    let API_URL = `${this.url}/users/delete/${id}`;
+    return this.httpClient.delete<JSON>(API_URL);
   }
 }

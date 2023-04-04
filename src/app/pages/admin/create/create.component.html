@@ -1,1 +1,36 @@
-<p>create works!</p>
+<div class="main-div">
+  <h2 >Write Your Message Here</h2>
+  <hr>
+  <form>
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="newUsername">Username: </label>
+        <input type="text" class="form-control rounded-0" id="newUsername" formControlName="newUsername" placeholder="Username" />
+      </div>
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="newEmail">Email: </label>
+        <input type="text" class="form-control rounded-0" id="newEmail" formControlName="newEmail" placeholder="Email Address" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="newPassword">Password: </label>
+        <input type="password" class="form-control rounded-0" id="newPassword" formControlName="newPassword" placeholder="********" />
+      </div>
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="newRole">Password: </label>
+        <select class="form-select rounded-0" id="newRole" formControlName="newRole">
+          <option>Student</option>
+          <option>Teacher</option>
+          <option>Nurse</option>
+          <option>Parent</option>
+          <option>Admin</option>
+        </select>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-primary" >Create</button>
+      <button class="btn btn-danger" (click)="returnAdminPage()">Cancel</button>
+    </div>
+  </form>
+</div>

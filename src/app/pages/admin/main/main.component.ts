@@ -18,4 +18,9 @@ export class MainComponent {
       console.log(error)
     }));
   }
+
+  deleteRecord(id: any){
+    this.userService.deleteUser(id).subscribe();
+    window.location.reload();
+  }
 }

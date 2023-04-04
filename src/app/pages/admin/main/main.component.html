@@ -22,7 +22,7 @@
           <td mat-cell *matCellDef="let element">
             <a href="/admin/edit/{{ element.id }}"><i class="fa-solid fa-pen-to-square fa-xl editIcon"></i></a>
             &nbsp;&nbsp;
-            <a href="/admin/delete/{{ element.id }}"><i class="fa-solid fa-trash fa-xl deleteIcon"></i></a>
+            <a [routerLink]="" (click)="deleteRecord(element.id)"><i class="fa-solid fa-trash fa-xl deleteIcon"></i></a>
           </td>
         </ng-container>
 
