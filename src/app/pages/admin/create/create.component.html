@@ -1,7 +1,7 @@
 <div class="main-div">
   <h2 >Write Your Message Here</h2>
   <hr>
-  <form>
+  <form [formGroup]="composeForm">
     <div class="row">
       <div class="mb-3 col-md-6">
         <label class="form-label" for="newUsername">Username: </label>
@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="buttons">
-      <button class="btn btn-primary" >Create</button>
+      <button class="btn btn-primary" (click)="insertUser()">Create</button>
       <button class="btn btn-danger" (click)="returnAdminPage()">Cancel</button>
     </div>
   </form>
