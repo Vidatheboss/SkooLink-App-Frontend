@@ -27,10 +27,10 @@ export class CreateComponent implements OnInit{
   insertUser(){
     let formData = this.composeForm.value;
     let data = {
-      newUsername: formData.newUsername,
-      newEmail: formData.newEmail,
-      newPassword: formData.newPassword,
-      newRole: 1
+      username: formData.newUsername,
+      email: formData.newEmail,
+      password: formData.newPassword,
+      role: formData.newRole
     }
 
     this.userService.addUser(data).subscribe((response:any) =>{

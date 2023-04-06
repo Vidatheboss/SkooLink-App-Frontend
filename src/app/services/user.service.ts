@@ -38,7 +38,7 @@ export class UserService {
     return this.httpClient.delete<JSON>(API_URL);
   }
 
-  addUser(data:any){
+  addUser(data: any){
     return this.httpClient.post(this.url +
       "/users/create", data, {
       headers: new HttpHeaders().set('Content-Type', "application/json")

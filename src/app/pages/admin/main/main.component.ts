@@ -13,7 +13,7 @@ export class MainComponent {
 
     this.userService.getUsers().subscribe((response)=>{
       this.users = response;
-      console.log(this.users);
+      // console.log(this.users);
     },(error=>{
       console.log(error)
     }));
