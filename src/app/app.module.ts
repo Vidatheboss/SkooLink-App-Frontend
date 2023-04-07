@@ -31,6 +31,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ComposeComponent } from './pages/compose/compose.component';
 import { TokenInterceptorInterceptor } from "./services/token-interceptor.interceptor";
 import { MedicalInfoComponent } from './pages/medical-info/medical-info.component';
+import { SupportComponent } from './pages/support/support.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { MedicalInfoComponent } from './pages/medical-info/medical-info.componen
     ComposeComponent,
 
     DashboardComponent,
-      MedicalInfoComponent
+    MedicalInfoComponent,
+    SupportComponent
   ],
     imports: [
         BrowserModule,
