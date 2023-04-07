@@ -11,6 +11,10 @@ import { InboxComponent } from './pages/inbox/inbox.component';
 import { RouteGuardService } from "./services/route-guard.service";
 import { ComposeComponent } from './pages/compose/compose.component';
 import { MedicalInfoComponent } from './pages/medical-info/medical-info.component';
+import { DashboardComponent} from "./pages/dashboard/dashboard.component";
+import { SupportComponent} from "./pages/support/support.component";
+import { TicketsComponent } from './pages/tickets/tickets.component';
+
 
 import {DashboardComponent} from "./pages/dashboard/dashboard.component";
 import {MainComponent} from "./pages/admin/main/main.component";
@@ -40,6 +44,7 @@ const routes: Routes = [
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
   },
+
   { path:'admin/main', component: MainComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['5'] }
@@ -52,6 +57,14 @@ const routes: Routes = [
     canActivate: [RouteGuardService],
     data: { expectedRole: ['5'] }
   },
+  { path:'support', component: SupportComponent,
+  canActivate: [RouteGuardService],
+  data: { expectedRole: ['1', '2', '3', '4', '5'] }
+ },
+ { path:'tickets', component: TicketsComponent,
+   canActivate: [RouteGuardService],
+   data: { expectedRole: ['5'] }
+ },
 ];
 
 @NgModule({

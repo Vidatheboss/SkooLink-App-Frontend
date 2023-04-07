@@ -54,6 +54,7 @@ export class UserService {
 
   getOneUser(id: any, role: any){
     let API_URL = `${this.url}/users/getOneUser/${id}/${role}`;
+
     return this.httpClient.get<JSON>(API_URL);
   }
 }

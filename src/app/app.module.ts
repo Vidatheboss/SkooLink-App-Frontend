@@ -12,7 +12,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { ProfilesComponent } from './pages/profiles/profiles.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
 import { SignupComponent } from './pages/signup/signup.component';
-
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -34,6 +33,8 @@ import { MedicalInfoComponent } from './pages/medical-info/medical-info.componen
 import { MainComponent } from './pages/admin/main/main.component';
 import { CreateComponent } from './pages/admin/create/create.component';
 import { EditComponent } from './pages/admin/edit/edit.component';
+import { SupportComponent } from './pages/support/support.component';
+import { TicketsComponent } from './pages/tickets/tickets.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,8 @@ import { EditComponent } from './pages/admin/edit/edit.component';
     MainComponent,
     CreateComponent,
     EditComponent
+    SupportComponent,
+    TicketsComponent
   ],
     imports: [
         BrowserModule,
