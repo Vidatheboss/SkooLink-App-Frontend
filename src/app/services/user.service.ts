@@ -27,4 +27,10 @@ export class UserService {
   checkToken(){
     return this.httpClient.get(this.url + "/users/checkToken")
   }
+
+  getUser(id: any){
+    let API_URL = `${this.url}/users/${id}`;
+
+    return this.httpClient.get<JSON>(API_URL);
+  }
 }

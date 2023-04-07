@@ -39,7 +39,7 @@ export class SupportComponent {
     console.log(data);
 
     this.supportService.postSupportMessage(data).subscribe((response:any) =>{
-      // this.router.navigate(['/home'])
+      this.router.navigate(['/home'])
     });
 
   }
