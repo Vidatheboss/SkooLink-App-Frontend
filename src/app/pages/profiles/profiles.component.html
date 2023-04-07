@@ -2,8 +2,18 @@
 
   <div class="main-div">
     <div class="content">
+
+        <form class="example-form">
+            <mat-form-field class="example-full-width">
+            <span matPrefix> </span>
+            <input type="tel" matInput placeholder="Search" name= "search" [(ngModel)]="searchStudent">
+            <button matSuffix mat-button (click)="getStudent(searchStudent)">
+                <mat-icon>search</mat-icon>
+            </button>
+            </mat-form-field>
+        </form>
        
-        <div>
+        <div class="students-table">
             <table mat-table [dataSource]="studentstable" class="mat-elevation-z8">
 
                 <ng-container  matColumnDef="name">
@@ -17,11 +27,18 @@
                 </ng-container>
 
                 
-                <ng-container  matColumnDef="detais">
+                <ng-container  matColumnDef="details">
                     <th mat-header-cell *matHeaderCellDef> Actions </th>
                     <td mat-cell *matCellDef="let element">
-                        <mat-card-title mat-icon-button color="primary" >
-                            <a href="/profile/{{element.id}}"><i class="bi bi-arrow-right"></i></a>
+                        <mat-card-title mat-icon-button>
+                            <button mat-raised-button color="primary" [routerLink]="['/profile/',element.id]">
+                                <mat-icon>assignment</mat-icon>
+                                Grades
+                            </button>
+                            <button *ngIf="ifNurse()" mat-raised-button color="warn" [routerLink]="['/profile/'+element.id+'/medical-info']">
+                                <mat-icon>local_hospital</mat-icon>
+                                Medical
+                            </button>
                         </mat-card-title>
                     </td>
                 </ng-container>
