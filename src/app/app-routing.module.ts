@@ -36,7 +36,7 @@ const routes: Routes = [
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
   },
   { path:'compose', component: ComposeComponent },
-  { path: 'dashboard', component: DashboardComponent,
+  { path:'dashboard', component: DashboardComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
   },
@@ -44,7 +44,7 @@ const routes: Routes = [
     canActivate: [RouteGuardService],
     data: { expectedRole: ['5'] }
   },
-  { path:'admin/edit/:id', component: EditComponent,
+  { path:'admin/edit/:id/:role', component: EditComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['5'] }
   },
