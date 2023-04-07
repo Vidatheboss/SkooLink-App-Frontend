@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
   id = localStorage.getItem('id');
+
 }
+

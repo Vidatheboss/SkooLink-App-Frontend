@@ -11,8 +11,9 @@ import { InboxComponent } from './pages/inbox/inbox.component';
 import { RouteGuardService } from "./services/route-guard.service";
 import { ComposeComponent } from './pages/compose/compose.component';
 import { MedicalInfoComponent } from './pages/medical-info/medical-info.component';
-
 import {DashboardComponent} from "./pages/dashboard/dashboard.component";
+import {SupportComponent} from "./pages/support/support.component";
+
 
 const routes: Routes = [
   { path:'home', component: HomeComponent },
@@ -36,7 +37,8 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
-  }
+  },
+  { path:'support', component: SupportComponent },
 ];
 
 @NgModule({
