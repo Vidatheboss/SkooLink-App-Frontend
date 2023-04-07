@@ -33,8 +33,8 @@ export class UserService {
     return this.httpClient.get<JSON>(API_URL);
   }
 
-  deleteUser(id: any){
-    let API_URL = `${this.url}/users/delete/${id}`;
+  deleteUser(id: any, role: any){
+    let API_URL = `${this.url}/users/delete/${id}/${role}`;
     return this.httpClient.delete<JSON>(API_URL);
   }
 
@@ -44,4 +44,32 @@ export class UserService {
       headers: new HttpHeaders().set('Content-Type', "application/json")
     })
   }
+
+  // addTeacher(data: any){
+  //   return this.httpClient.post(this.url +
+  //     "/users/create", data, {
+  //     headers: new HttpHeaders().set('Content-Type', "application/json")
+  //   })
+  // }
+  //
+  // addNurse(data: any){
+  //   return this.httpClient.post(this.url +
+  //     "/users/create", data, {
+  //     headers: new HttpHeaders().set('Content-Type', "application/json")
+  //   })
+  // }
+
+  // addParent(data: any){
+  //   return this.httpClient.post(this.url +
+  //     "/users/create", data, {
+  //     headers: new HttpHeaders().set('Content-Type', "application/json")
+  //   })
+  // }
+  //
+  // addAdmin(data: any){
+  //   return this.httpClient.post(this.url +
+  //     "/users/create", data, {
+  //     headers: new HttpHeaders().set('Content-Type', "application/json")
+  //   })
+  // }
 }

@@ -19,8 +19,8 @@ export class MainComponent {
     }));
   }
 
-  deleteRecord(id: any){
-    this.userService.deleteUser(id).subscribe();
+  deleteRecord(id: any, role: any){
+    this.userService.deleteUser(id, role).subscribe();
     window.location.reload();
   }
 }

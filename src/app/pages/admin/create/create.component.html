@@ -3,6 +3,12 @@
   <hr>
   <form [formGroup]="composeForm">
     <div class="row">
+      <div class="mb-3 col-md-12">
+        <label class="form-label" for="newFullName">Full Name: </label>
+        <input type="text" class="form-control rounded-0" id="newFullName" formControlName="newFullName" placeholder="Full Name" />
+      </div>
+    </div>
+    <div class="row">
       <div class="mb-3 col-md-6">
         <label class="form-label" for="newUsername">Username: </label>
         <input type="text" class="form-control rounded-0" id="newUsername" formControlName="newUsername" placeholder="Username" />
@@ -18,8 +24,8 @@
         <input type="password" class="form-control rounded-0" id="newPassword" formControlName="newPassword" placeholder="********" />
       </div>
       <div class="mb-3 col-md-6">
-        <label class="form-label" for="newRole">Password: </label>
-        <select class="form-select rounded-0" id="newRole" formControlName="newRole">
+        <label class="form-label" for="newRole">Role: </label>
+        <select class="form-select rounded-0" id="newRole" formControlName="newRole" >
           <option value="1">Student</option>
           <option value="2">Teacher</option>
           <option value="3">Nurse</option>

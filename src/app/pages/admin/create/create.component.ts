@@ -16,7 +16,8 @@ export class CreateComponent implements OnInit{
       newUsername:[null],
       newEmail: [null],
       newPassword:[null],
-      newRole: [null]
+      newRole: [null],
+      newFullName: [null]
     })
   }
 
@@ -30,10 +31,11 @@ export class CreateComponent implements OnInit{
       username: formData.newUsername,
       email: formData.newEmail,
       password: formData.newPassword,
-      role: formData.newRole
+      role: formData.newRole,
+      fullName: formData.newFullName
     }
 
-    this.userService.addUser(data).subscribe((response:any) =>{
+    this.userService.addUser(data).subscribe((response: any) =>{
       this.router.navigate(['/admin/main'])
     });
   }
