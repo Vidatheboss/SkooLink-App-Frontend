@@ -1,0 +1,36 @@
+<div class="main-div">
+  <h2>Edit Record</h2>
+  <hr>
+  <form [formGroup]="composeForm" >
+    <div class="row">
+      <div class="mb-3 col-md-12">
+        <label class="form-label" for="updatedFullName">Full Name: </label>
+        <input type="text" class="form-control rounded-0" id="updatedFullName" formControlName="updatedFullName" value="{{ fullName }}"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="updatedUsername">Username: </label>
+        <input type="text" class="form-control rounded-0" id="updatedUsername" formControlName="updatedUsername" value="{{ username }}" />
+      </div>
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="email">Email: </label>
+        <input type="text" class="form-control rounded-0" id="email" value="{{ email }}" disabled/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="updatedPassword">New Password: </label>
+        <input type="password" class="form-control rounded-0" id="updatedPassword" formControlName="updatedPassword" placeholder="********" />
+      </div>
+      <div class="mb-3 col-md-6">
+        <label class="form-label" for="role">Role: </label>
+        <input type="text" class="form-control rounded-0" id="role" value="{{ roleName }}" disabled/>
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-primary" (click)="updateUser()">Update</button>
+      <button class="btn btn-danger" (click)="returnAdminPage()">Cancel</button>
+    </div>
+  </form>
+</div>
