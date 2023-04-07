@@ -34,6 +34,8 @@ import { MedicalInfoComponent } from './pages/medical-info/medical-info.componen
 import { MainComponent } from './pages/admin/main/main.component';
 import { CreateComponent } from './pages/admin/create/create.component';
 import { EditComponent } from './pages/admin/edit/edit.component';
+import { SupportComponent } from './pages/support/support.component';
+import { TicketsComponent } from './pages/tickets/tickets.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +55,9 @@ import { EditComponent } from './pages/admin/edit/edit.component';
     MainComponent,
     CreateComponent,
     EditComponent
+    MedicalInfoComponent,
+    SupportComponent,
+    TicketsComponent
   ],
     imports: [
         BrowserModule,

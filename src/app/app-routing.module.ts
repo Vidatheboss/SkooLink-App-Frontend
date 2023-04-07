@@ -11,6 +11,9 @@ import { InboxComponent } from './pages/inbox/inbox.component';
 import { RouteGuardService } from "./services/route-guard.service";
 import { ComposeComponent } from './pages/compose/compose.component';
 import { MedicalInfoComponent } from './pages/medical-info/medical-info.component';
+import { DashboardComponent} from "./pages/dashboard/dashboard.component";
+import { SupportComponent} from "./pages/support/support.component";
+import { TicketsComponent } from './pages/tickets/tickets.component';
 
 import {DashboardComponent} from "./pages/dashboard/dashboard.component";
 import {MainComponent} from "./pages/admin/main/main.component";

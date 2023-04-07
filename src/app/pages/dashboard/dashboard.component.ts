@@ -18,3 +18,4 @@ export class DashboardComponent {
     return role === '2' || role === '3';
   }
 }
+
