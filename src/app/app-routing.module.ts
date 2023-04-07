@@ -16,6 +16,11 @@ import { SupportComponent} from "./pages/support/support.component";
 import { TicketsComponent } from './pages/tickets/tickets.component';
 
 
+import {DashboardComponent} from "./pages/dashboard/dashboard.component";
+import {MainComponent} from "./pages/admin/main/main.component";
+import {EditComponent} from "./pages/admin/edit/edit.component";
+import {CreateComponent} from "./pages/admin/create/create.component";
+
 const routes: Routes = [
   { path:'home', component: HomeComponent },
   { path:'', redirectTo: 'home', pathMatch: 'full' },
@@ -35,9 +40,22 @@ const routes: Routes = [
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
   },
   { path:'compose', component: ComposeComponent },
-  { path: 'dashboard', component: DashboardComponent,
+  { path:'dashboard', component: DashboardComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
+  },
+
+  { path:'admin/main', component: MainComponent,
+    canActivate: [RouteGuardService],
+    data: { expectedRole: ['5'] }
+  },
+  { path:'admin/edit/:id/:role', component: EditComponent,
+    canActivate: [RouteGuardService],
+    data: { expectedRole: ['5'] }
+  },
+  { path:'admin/create', component: CreateComponent,
+    canActivate: [RouteGuardService],
+    data: { expectedRole: ['5'] }
   },
   { path:'support', component: SupportComponent,
   canActivate: [RouteGuardService],
