@@ -53,7 +53,7 @@ import { TicketsComponent } from './pages/tickets/tickets.component';
     MedicalInfoComponent,
     MainComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
     SupportComponent,
     TicketsComponent
   ],

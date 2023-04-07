@@ -14,9 +14,6 @@ import { MedicalInfoComponent } from './pages/medical-info/medical-info.componen
 import { DashboardComponent} from "./pages/dashboard/dashboard.component";
 import { SupportComponent} from "./pages/support/support.component";
 import { TicketsComponent } from './pages/tickets/tickets.component';
-
-
-import {DashboardComponent} from "./pages/dashboard/dashboard.component";
 import {MainComponent} from "./pages/admin/main/main.component";
 import {EditComponent} from "./pages/admin/edit/edit.component";
 import {CreateComponent} from "./pages/admin/create/create.component";
