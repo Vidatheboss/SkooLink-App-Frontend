@@ -30,6 +30,7 @@ import { NewsComponent } from './pages/news/news.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ComposeComponent } from './pages/compose/compose.component';
 import { TokenInterceptorInterceptor } from "./services/token-interceptor.interceptor";
+import { InboxFilterComponent } from './pages/inbox-filter/inbox-filter.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { TokenInterceptorInterceptor } from "./services/token-interceptor.interc
     InboxComponent,
     ComposeComponent,
 
-    DashboardComponent
+    DashboardComponent,
+      InboxFilterComponent
   ],
     imports: [
         BrowserModule,

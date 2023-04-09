@@ -10,7 +10,7 @@ import { NewsComponent } from './pages/news/news.component';
 import { InboxComponent } from './pages/inbox/inbox.component';
 import { RouteGuardService } from "./services/route-guard.service";
 import { ComposeComponent } from './pages/compose/compose.component';
-
+import { InboxFilterComponent } from './pages/inbox-filter/inbox-filter.component';
 import {DashboardComponent} from "./pages/dashboard/dashboard.component";
 
 const routes: Routes = [
@@ -25,6 +25,7 @@ const routes: Routes = [
   { path:'profile/:id/grades', component: ProfileComponent },
   { path:'profile/:id', component: ProfileComponent },
   { path:'inbox/:id', component: InboxComponent },
+  {path:'inbox-filter/:id', component:InboxFilterComponent},
   { path:'profile/:id', component: ProfileComponent },
   { path:'news', component: NewsComponent,
     canActivate: [RouteGuardService],
