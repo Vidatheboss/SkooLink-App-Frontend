@@ -1,7 +1,26 @@
 
+   <div>
+    <h2>Filter Options:</h2>
+    <label>
+      <input type="radio" [(ngModel)]="answer" [checked]="true" name="filterOption" value="holiday" (change)="getNews(answer)"  > holiday
+    </label>
+    <br>
+    <label>
+      <input type="radio" [(ngModel)]="answer" name="filterOption" value="important" (change)="getNews(answer)"   > important
+    </label>
+    <br>
+    <label>
+      <input type="radio" [(ngModel)]="answer" name="filterOption" value="history" (change)="getNews(answer)"   > history
+    </label>
+    <br>
+                   
+  </div>   
+
+
+
 <div class="main-div">
-    <div class="content">
-        <div class="grades-table">
+    <div class="content">    
+        <div>
             <table mat-table [dataSource]="news" class="mat-elevation-z8">
                 <ng-container matColumnDef="category">
                     <th mat-header-cell *matHeaderCellDef> Category </th>
