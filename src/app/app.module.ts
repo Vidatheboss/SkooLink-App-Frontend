@@ -29,12 +29,14 @@ import { NewsComponent } from './pages/news/news.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { ComposeComponent } from './pages/compose/compose.component';
 import { TokenInterceptorInterceptor } from "./services/token-interceptor.interceptor";
+import { InboxFilterComponent } from './pages/inbox-filter/inbox-filter.component';
 import { MedicalInfoComponent } from './pages/medical-info/medical-info.component';
 import { MainComponent } from './pages/admin/main/main.component';
 import { CreateComponent } from './pages/admin/create/create.component';
 import { EditComponent } from './pages/admin/edit/edit.component';
 import { SupportComponent } from './pages/support/support.component';
 import { TicketsComponent } from './pages/tickets/tickets.component';
+
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { TicketsComponent } from './pages/tickets/tickets.component';
     NewsComponent,
     InboxComponent,
     ComposeComponent,
+    InboxFilterComponent,
     DashboardComponent,
     MedicalInfoComponent,
     MainComponent,
@@ -56,6 +59,7 @@ import { TicketsComponent } from './pages/tickets/tickets.component';
     EditComponent,
     SupportComponent,
     TicketsComponent
+
   ],
     imports: [
         BrowserModule,
