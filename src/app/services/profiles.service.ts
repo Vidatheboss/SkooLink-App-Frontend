@@ -6,15 +6,18 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
   providedIn: 'root'
 })
 export class ProfilesService {
-  apiUrlGetStudentts = environment.apiUrl+ '/studentts/students'
+  apiUrlGetStudents = environment.apiUrl+ '/students'
 
   constructor(private httpClient:HttpClient){
+
   }
 
   getStudents(){
-    let API_URL = `${this.apiUrlGetStudentts}`;
+    return this.httpClient.get<JSON>(this.apiUrlGetStudents) 
+  }
 
-    return this.httpClient.get<JSON>(API_URL) 
+  getStudent(student: any){
+    return this.httpClient.get<JSON>(`${this.apiUrlGetStudents}/${student}`) 
   }
 
 

@@ -1,8 +1,7 @@
 .main-div {
-    height: 100vh;
-    background-color: rgb(190, 190, 238);
-    position:relative;
-    display:block;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .content{
     position:absolute;

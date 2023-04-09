@@ -1,0 +1,34 @@
+
+<div class="main-div">
+    <div class="content">
+        <div class="grades-table">
+            <table mat-table [dataSource]="tickets" class="mat-elevation-z8">
+                <ng-container matColumnDef="creator_id">
+                    <th mat-header-cell *matHeaderCellDef> Creator Id </th>
+                    <td mat-cell *matCellDef="let element"> {{element.creator_id}} </td>
+                </ng-container>
+                <ng-container matColumnDef="email">
+                    <th mat-header-cell *matHeaderCellDef> Email </th>
+                    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+                </ng-container>
+                <ng-container matColumnDef="subject">
+                    <th mat-header-cell *matHeaderCellDef> Subject </th>
+                    <td mat-cell *matCellDef="let element"> {{element.subject}} </td>
+                </ng-container>
+                <ng-container matColumnDef="description">
+                    <th mat-header-cell *matHeaderCellDef> Description </th>
+                    <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+                </ng-container>
+                <ng-container matColumnDef="date">
+                    <th mat-header-cell *matHeaderCellDef> Date </th>
+                    <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            
+        </div>
+    </div>
+</div>
