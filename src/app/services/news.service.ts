@@ -9,15 +9,16 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 export class NewsService {
   apiUrlGetNews = environment.apiUrl + '/news'
 
+
   constructor(private httpClient:HttpClient){
 
   }
 
-  getNews(){
-    let API_URL = `${this.apiUrlGetNews}/get`;
+  getNews(category: any){
+    let API_URL = `${this.apiUrlGetNews}/get/${category}`;
 
     return this.httpClient.get<JSON>(API_URL);
   }
 
-  
+
 }

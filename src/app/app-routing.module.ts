@@ -10,15 +10,15 @@ import { NewsComponent } from './pages/news/news.component';
 import { InboxComponent } from './pages/inbox/inbox.component';
 import { RouteGuardService } from "./services/route-guard.service";
 import { ComposeComponent } from './pages/compose/compose.component';
+import { InboxFilterComponent } from './pages/inbox-filter/inbox-filter.component';
 import { MedicalInfoComponent } from './pages/medical-info/medical-info.component';
 import { DashboardComponent} from "./pages/dashboard/dashboard.component";
 import { SupportComponent} from "./pages/support/support.component";
 import { TicketsComponent } from './pages/tickets/tickets.component';
-
-import {DashboardComponent} from "./pages/dashboard/dashboard.component";
 import {MainComponent} from "./pages/admin/main/main.component";
 import {EditComponent} from "./pages/admin/edit/edit.component";
 import {CreateComponent} from "./pages/admin/create/create.component";
+
 
 const routes: Routes = [
   { path:'home', component: HomeComponent },
@@ -33,6 +33,7 @@ const routes: Routes = [
   { path:'profile/:id/medical-info', component: MedicalInfoComponent },
   { path:'profile/:id', component: ProfileComponent },
   { path:'inbox/:id', component: InboxComponent },
+  {path:'inbox-filter/:id', component:InboxFilterComponent},
   { path:'profile/:id', component: ProfileComponent },
   { path:'news', component: NewsComponent,
     canActivate: [RouteGuardService],
@@ -43,6 +44,7 @@ const routes: Routes = [
     canActivate: [RouteGuardService],
     data: { expectedRole: ['1', '2', '3', '4', '5'] }
   },
+
   { path:'admin/main', component: MainComponent,
     canActivate: [RouteGuardService],
     data: { expectedRole: ['5'] }
@@ -55,6 +57,14 @@ const routes: Routes = [
     canActivate: [RouteGuardService],
     data: { expectedRole: ['5'] }
   },
+  { path:'support', component: SupportComponent,
+  canActivate: [RouteGuardService],
+  data: { expectedRole: ['1', '2', '3', '4', '5'] }
+ },
+ { path:'tickets', component: TicketsComponent,
+   canActivate: [RouteGuardService],
+   data: { expectedRole: ['5'] }
+ },
 ];
 
 @NgModule({
