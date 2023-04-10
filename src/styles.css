@@ -1,5 +1,5 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
-html, body { height: 100%; }
+html, body { height: 120%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgb(190, 190, 238);}
 .cdk-global-overlay-wrapper, .cdk-overlay-container {
     z-index: 10000 !important;
@@ -8,4 +8,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 .black-snackbar {
   background-color: black;
   color: white;
+}
+
+.main-div {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
 }

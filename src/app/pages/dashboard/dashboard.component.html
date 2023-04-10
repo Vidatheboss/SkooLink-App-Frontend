@@ -7,7 +7,7 @@
       News
     </mat-card-content>
   </mat-card>
-  <mat-card class="example-card dashboardCard">
+  <mat-card class="example-card dashboardCard" *ngIf="hasStudentAccess()">
     <mat-card-header class="cardImage">
       <mat-card-title><a href="/profiles"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></a></mat-card-title>
     </mat-card-header>
@@ -21,6 +21,14 @@
     </mat-card-header>
     <mat-card-content class="cardContent">
       Inbox
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="example-card dashboardCard" *ngIf="isAdmin()">
+    <mat-card-header class="cardImage">
+      <mat-card-title><a href="/admin/main"><i class="fa-solid fa-gear fa-2xl"></i></a></mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="cardContent">
+      Admin
     </mat-card-content>
   </mat-card>
 </div>
