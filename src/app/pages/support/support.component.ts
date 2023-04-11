@@ -17,7 +17,7 @@ export class SupportComponent {
     private id = localStorage.getItem('id');
 
 
-  constructor(private router: Router, private formBuilder: FormBuilder, private supportService:  SupportService) {
+  constructor(private router: Router, private formBuilder: FormBuilder, private supportService: SupportService) {
   }
 
   ngOnInit() {
