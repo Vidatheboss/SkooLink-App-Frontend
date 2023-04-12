@@ -1,0 +1,32 @@
+.main-div {
+    height: 100vh;
+    background-color: rgb(190, 190, 238);
+    position:relative;
+    display:block;
+}
+.content{
+    position:absolute;
+    width: 100%;
+    top: 10%;
+}
+.mat-column-name{
+    width: 50%;
+}
+.mat-column-id{
+    width: 15%;
+}.mat-column-details{
+    width: 35%;
+}
+table{
+    margin-bottom: 20px;
+}
+.students-table{
+    width: 60%;
+}
+button{
+    margin-right: 10px;
+}
+.grades-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+}
+

@@ -1,12 +1,30 @@
 <!--compose button-->
 <button type="button" class="btn btn-primary" (click)="goToNewPage()"  data-bs-dismiss="modal">Compose</button>
+<br>
+<br>
 
+
+<div>
+    <h2>Filter Options:</h2>
+    <label>
+      <input type="radio" [(ngModel)]="answer" name="filterOption" value="1" (change)="getStat(id,answer)" > Read
+    </label>
+    <br>
+    <label>
+      <input type="radio" [(ngModel)]="answer" name="filterOption" value="0" (change)="getStat(id,answer)"   > Unread
+    </label>
+  </div>   
 
 <div class="main-div">
     <div class="content">
        
         <div>
             <table mat-table [dataSource]="messages" class="mat-elevation-z8">
+
+                <!-- <ng-container  matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef> ID </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container> -->
 
                 <ng-container  matColumnDef="date">
                     <th mat-header-cell *matHeaderCellDef> Date </th>
@@ -22,6 +40,15 @@
                     <th mat-header-cell *matHeaderCellDef> Message </th>
                     <td mat-cell *matCellDef="let element"> {{element.message}} </td>
                 </ng-container>
+
+                <ng-container  matColumnDef="details">
+                    <th mat-header-cell *matHeaderCellDef> Open Message </th>
+                    <td mat-cell *matCellDef="let element" >
+                        <mat-card-title mat-icon-button color="primary" >
+                            <a href="/inbox-filter/{{element.id}} "  (click)="updateMessage(element.id)"><i class="bi bi-arrow-right" ></i></a>
+                        </mat-card-title>
+                    </td>
+                </ng-container>
             
    
 
@@ -29,7 +56,7 @@
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
 
-
+            <!-- <button class="btn btn-primary" (click)="updateMessage(2)">Close </button> -->
         </div>
     </div>
 </div>

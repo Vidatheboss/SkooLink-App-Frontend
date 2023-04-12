@@ -1,0 +1,40 @@
+.main-div {
+    height: 100vh;
+    background-color: rgb(190, 190, 238);
+    position:relative;
+    display:block;
+}
+.content{
+    position:absolute;
+    width: 100%;
+    top: 10%;
+}
+mat-card{
+    width: 60%;
+    margin-bottom: 20px;
+}
+.mat-column-date{
+    width: 15%;
+}
+.mat-column-nurse{
+    width: 30%;
+}
+.mat-column-info{
+    width: 30%;
+}
+.mat-column-actions{
+    width: 25%;
+}
+table{
+    margin-bottom: 20px;
+}
+.medical-table{
+    width: 60%;
+}
+button{
+    margin-right: 10px;
+}
+.medical-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+}
+

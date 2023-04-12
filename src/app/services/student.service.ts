@@ -7,6 +7,7 @@ import {HttpClient, HttpHeaders} from "@angular/common/http";
 })
 export class StudentService {
   apiUrlGetStudent = environment.apiUrl + '/students'
+  apiUrlGetMedical = environment.apiUrl + '/medical-info'
   apiUrlPostGrade = this.apiUrlGetStudent + '/grades'
   apiUrlEditGrade = this.apiUrlPostGrade + '/edit'
 
@@ -38,6 +39,28 @@ export class StudentService {
 
   editStudentGrade(data: any){
     return this.httpClient.post(this.apiUrlEditGrade, data);
+  }
+
+  getStudentMedical(student: any){
+    let API_URL = `${this.apiUrlGetMedical}/${student}`;
+
+    return this.httpClient.get<JSON>(API_URL);
+  }
+
+  deleteStudentMedical(id: any){
+    let API_URL = `${this.apiUrlGetMedical}/${id}`;
+
+    return this.httpClient.delete(API_URL);
+  }
+
+  postStudentMedical(data: any){
+    return this.httpClient.post(this.apiUrlGetMedical, data);
+  }
+
+  editStudentMedical(data: any){
+    let API_URL = `${this.apiUrlGetMedical}/edit`;
+
+    return this.httpClient.post(API_URL, data);
   }
   
 }
