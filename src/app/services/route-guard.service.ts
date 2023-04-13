@@ -34,7 +34,7 @@ export class RouteGuardService {
       }
     }
 
-    if (tokenPayload.role == '1' || tokenPayload.role == '2' || tokenPayload.role == '3' || tokenPayload == '4' || tokenPayload.role == '5') {
+    if (tokenPayload.role == '1' || tokenPayload.role == '2' || tokenPayload.role == '3' || tokenPayload.role == '4' || tokenPayload.role == '5') {
       if (this.auth.isAuthenticated() && checkRole) {
         return true;
       } else {
