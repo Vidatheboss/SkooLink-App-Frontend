@@ -13,7 +13,7 @@ import { NewsService} from '../../services/news.service';
 })
 export class NewsComponent implements OnInit{
   new: string = '';
-  answer = '';
+  answer = 'all';
   public news: any;
   public category:any;
 
