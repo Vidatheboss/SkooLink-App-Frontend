@@ -26,7 +26,7 @@ export class InboxService {
 
     return this.httpClient.get<JSON>(API_URL+'/'+id) 
   }
-  /// updateMessage update messages set stat=1 where id=...
+  
   updateMessage(data: any){
     return this.httpClient.post(this.apiUrlUpdateMessage, data);
   }
