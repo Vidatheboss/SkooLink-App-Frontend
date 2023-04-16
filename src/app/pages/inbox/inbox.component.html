@@ -21,10 +21,7 @@
         <div>
             <table mat-table [dataSource]="messages" class="mat-elevation-z8">
 
-                <!-- <ng-container  matColumnDef="id">
-                    <th mat-header-cell *matHeaderCellDef> ID </th>
-                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-                </ng-container> -->
+
 
                 <ng-container  matColumnDef="date">
                     <th mat-header-cell *matHeaderCellDef> Date </th>
@@ -56,7 +53,7 @@
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
 
-            <!-- <button class="btn btn-primary" (click)="updateMessage(2)">Close </button> -->
+         
         </div>
     </div>
 </div>

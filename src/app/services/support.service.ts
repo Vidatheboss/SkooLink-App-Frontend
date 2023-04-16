@@ -19,8 +19,6 @@ export class SupportService {
     return this.httpClient.post<JSON>(API_URL, data);
   }
 
-  // postSupportMessage(data: any){
-  //   return this.httpClient.post(this.apiUrlGetMedical, data);
-  // }
+
 
 }

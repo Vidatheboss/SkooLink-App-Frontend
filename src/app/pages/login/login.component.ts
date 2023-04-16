@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private userService: UserService,
-    // private snackbarService: SnackbarService
+ 
   ) { }
 
   username: string | undefined;
@@ -43,14 +43,14 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('role', response.role);
       localStorage.setItem('fullName', response.fullName)
       window.location.href = 'http://localhost:4200/dashboard'
-      // this.router.navigate(['/dashboard'])
+     
     },(error) => {
       if (error.error?.message) {
         this.respondMessage = error.error?.message;
       } else {
         this.respondMessage = GlobalConstants.genericError;
       }
-      // this.snackbarService.openSnackBar(this.respondMessage, GlobalConstants.error);
+      
     })
   }
 
