@@ -9,6 +9,8 @@ import {Router} from "@angular/router";
 export class HeaderComponent {
 
   id = localStorage.getItem('id')
+  fullName = localStorage.getItem('fullName')
+  role = localStorage.getItem('role')
 
   constructor(private router: Router) {
   }
@@ -27,7 +29,20 @@ export class HeaderComponent {
     }
   }
 
-  getUserId(){
+  getRoleName(){
+    let userRoleName = '';
+    if (this.role === '1') {
+      userRoleName = 'Student';
+    } else if (this.role === '2') {
+      userRoleName = 'Teacher';
+    } else if (this.role === '3') {
+      userRoleName = 'Nurse';
+    } else if (this.role === '4') {
+      userRoleName = 'Parent';
+    } else if (this.role === '5') {
+      userRoleName = 'Admin';
+    }
 
+    return userRoleName;
   }
 }

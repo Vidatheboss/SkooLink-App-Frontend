@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private userService: UserService,
-    // private snackbarService: SnackbarService
+ 
   ) { }
 
   username: string | undefined;
@@ -36,19 +36,21 @@ export class LoginComponent implements OnInit {
       email: formData.email,
       password: formData.password
     }
-    
+
     this.userService.login(data).subscribe((response: any) =>{
       localStorage.setItem('token', response.token);
       localStorage.setItem('id', response.id);
       localStorage.setItem('role', response.role);
-      this.router.navigate(['/dashboard'])
+      localStorage.setItem('fullName', response.fullName)
+      window.location.href = 'http://localhost:4200/dashboard'
+     
     },(error) => {
       if (error.error?.message) {
         this.respondMessage = error.error?.message;
       } else {
         this.respondMessage = GlobalConstants.genericError;
       }
-      // this.snackbarService.openSnackBar(this.respondMessage, GlobalConstants.error);
+      
     })
   }
 

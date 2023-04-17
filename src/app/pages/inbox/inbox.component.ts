@@ -13,7 +13,7 @@ export class InboxComponent {
   subject: string = '';
   date: string='';
  
- // idMessage: number=0;
+
   answer = '';
   public id: any;
   public messages:any;
@@ -23,7 +23,7 @@ export class InboxComponent {
 
   constructor(private route: ActivatedRoute, private inboxService: InboxService, private router: Router){
     this.id = route.snapshot.paramMap.get('id');
-   // this.getStat(this.id,1);
+ 
     this.inboxService.getMessage(this.id).subscribe((response)=>{
 
       this.messages  = response;
@@ -37,7 +37,7 @@ export class InboxComponent {
 
 
   getStat(stid:any,stat:any){
-    //console.log(stat);
+
 
     this.inboxService.getStat(stid,stat).subscribe((response)=>{
 

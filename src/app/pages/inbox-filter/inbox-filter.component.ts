@@ -26,7 +26,7 @@ export class InboxFilterComponent {
 
       this.messages  = response;
        console.log(this.messages);
-      //this.message = result[0].message;
+
     },(error=>{
     }));
   }

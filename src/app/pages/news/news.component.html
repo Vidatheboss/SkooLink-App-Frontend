@@ -1,16 +1,20 @@
 
    <div>
     <h2>Filter Options:</h2>
+     <label>
+      <input type="radio" [(ngModel)]="answer" name="filterOption" value="all" (change)="getNews(answer)" > All
+    </label> 
+    <br>
     <label>
-      <input type="radio" [(ngModel)]="answer" [checked]="true" name="filterOption" value="holiday" (change)="getNews(answer)"  > holiday
+      <input type="radio" [(ngModel)]="answer" name="filterOption" value="holiday" (change)="getNews(answer)"  > Holiday
     </label>
     <br>
     <label>
-      <input type="radio" [(ngModel)]="answer" name="filterOption" value="important" (change)="getNews(answer)"   > important
+      <input type="radio" [(ngModel)]="answer" name="filterOption" value="important" (change)="getNews(answer)"   > Important
     </label>
     <br>
     <label>
-      <input type="radio" [(ngModel)]="answer" name="filterOption" value="history" (change)="getNews(answer)"   > history
+      <input type="radio" [(ngModel)]="answer" name="filterOption" value="Parents and Teachers" (change)="getNews(answer)"   > Parents and Teachers
     </label>
     <br>
                    
